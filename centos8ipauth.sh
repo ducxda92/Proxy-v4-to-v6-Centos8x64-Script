@@ -54,8 +54,6 @@ setgid 65535
 setuid 65535
 stacksize 6291456 
 flush
-auth iponly
-users $(awk -F "/" 'BEGIN{ORS="";} {print $1 ":CL:" $2 " "}' ${WORKDATA})
 $(awk -F "/" '{print "auth iponly\n" \
 "allow * 58.186.61.26"\n" \
 "deny * *"\n" \
